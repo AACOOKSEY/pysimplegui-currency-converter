@@ -1,4 +1,3 @@
-import re
 import requests
 
 url = 'https://open.er-api.com/v6/latest/GBP'

@@ -33,8 +33,10 @@ while True:
         break
     if event == 'Convert':
         if values['-INCUR-'] == '' or values['-INVAL-'] == '' or values['-OUTCUR-'] == '':
+            #Error if value is missing
             sg.popup('ERROR\nA value is missing!\nMake sure the appropriate boxes have been filled.', title="ERROR")
         elif values['-INCUR-'] == values['-OUTCUR-']:
+            #Error if INCUR and OUTCUR are the same
             sg.popup("ERROR\nYou can't convert a currency into itself!", title="ERROR")
         else:
             try:
